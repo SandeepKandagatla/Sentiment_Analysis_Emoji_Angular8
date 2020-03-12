@@ -1,0 +1,28 @@
+<div style="display: flex;
+height: 300px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+">
+  
+<h4>Sentiment Analysis</h4>
+
+  <textarea style="width: 28%;height: 20%;" type="text" class="form-control" (input)="statementScore($event)">
+    </textarea>
+
+
+<p>{{score}}</p>
+
+<div style="font-size: xx-large;">
+  <span style="margin-left: 8px;">😈</span>
+  <span style="margin-left: 11px;">🙁</span>
+  <span style="margin-left: 11px;">😐</span>
+  <span style="margin-left: 11px;">🙂</span>
+  <span style="margin-left: 11px;">😍</span>
+
+  </div>
+
+<mat-slider  min="-5" max="5" step="1" [value]="score"></mat-slider>
+<!-- <div><strong>Positive Words:</strong> {{AnalysisResult?.positive | json}}</div>
+<div><strong>Negative Words:</strong> {{AnalysisResult?.negative | json}}</div> -->
+</div>
